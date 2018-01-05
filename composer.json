@@ -72,10 +72,10 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "@drupal-scaffold"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "@drupal-scaffold"
         ]
     },
     "extra": {
@@ -84,21 +84,21 @@
             "npm-asset"
         ],
         "installer-paths": {
-            "web/core": [
+            "core": [
                 "type:drupal-core"
             ],
-            "web/libraries/{$name}": [
+            "libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "web/modules/contrib/{$name}": [
+            "modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "web/profiles/contrib/{$name}": [
+            "profiles/{$name}": [
                 "type:drupal-profile"
             ],
-            "web/themes/contrib/{$name}": [
+            "themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
             "drush/contrib/{$name}": [
